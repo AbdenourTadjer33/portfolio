@@ -1,0 +1,67 @@
+{
+  "name": "Abdennour Tadjer",
+  "role": "Développeur Full Stack",
+  "nav": {
+    "profile": "Profil",
+    "about": "À propos",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "intro": "Passionné par la création de solutions élégantes à des problèmes complexes. Expérimenté en React, Node.js et technologies cloud.",
+  "aboutMe": "Bonjour ! Je suis un développeur passionné avec une expertise en React, Node.js et technologies cloud. J'aime créer des solutions élégantes à des problèmes complexes et je suis toujours désireux d'apprendre de nouvelles technologies. Avec une solide base en développement full-stack, je m'efforce de construire des applications évolutives et efficaces qui offrent d'excellentes expériences utilisateur. Quand je ne code pas, vous pouvez me trouver en train d'explorer de nouvelles tendances technologiques, de contribuer à des projets open-source ou de profiter d'activités de plein air.",
+  "contactMe": "Me contacter",
+  "hireMe": "Engagez-moi",
+  "hireMeTitle": "Travaillons ensemble",
+  "hireMeDescription": "Je suis actuellement disponible pour du travail freelance. Si vous avez un projet que vous souhaitez démarrer, pensez que vous avez besoin de mon aide pour quelque chose ou souhaitez simplement dire bonjour, alors contactez-moi.",
+  "projectsTitle": "Mes Projets",
+  "projectDesc": "Une brève description du projet {number} et des technologies utilisées.",
+  "viewProject": "Voir le projet",
+  "liveDemo": "Démo en direct",
+  "backToPortfolio": "Retour au Portfolio",
+  "projects": {
+    "crti-project-management-app": {
+      "name": "ResearchX - Application de gestion de projet pour les chercheurs",
+      "description": ""
+    },
+    "e-commerce-management-application": {
+      "name": "E'CommerceControl - Panneau d'administration pour les applications de gestion d'e-commerce",
+      "description": ""
+    },
+    "best-tour-travel-agency-website": {
+      "name": "TravelMate - Système de gestion complet pour agences de voyage",
+      "description": ""
+    },
+    "sagimex-pro-business-website": {
+      "name": "Sagimex Pro - Site Web professionnel",
+      "description": ""
+    }
+  },
+  "experienceTitle": "Expérience",
+  "languages": {
+    "title": "Langages",
+    "desc": "Langages de programmation que je maîtrise"
+  },
+  "frontend": {
+    "title": "Technologies Frontend",
+    "desc": "Outils et frameworks que j'utilise pour le développement frontend"
+  },
+  "backend": {
+    "title": "Technologies Backend",
+    "desc": "Outils et frameworks que j'utilise pour le développement backend"
+  },
+  "other": {
+    "title": "Autres Technologies",
+    "desc": "Outils et technologies supplémentaires avec lesquels j'ai de l'expérience"
+  },
+  "contactTitle": "Contactez-moi",
+  "contactText": "N'hésitez pas à me contacter si vous avez des questions ou si vous voulez simplement discuter !",
+  "form": {
+    "name": "Votre Nom",
+    "email": "Votre Email",
+    "message": "Votre Message",
+    "sendMessage": "Envoyer le message"
+  },
+  "footer": "Tous droits réservés.",
+  "toggleTheme": "Changer de thème"
+}
