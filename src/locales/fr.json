@@ -8,8 +8,8 @@
     "experience": "Expérience",
     "contact": "Contact"
   },
-  "intro": "Passionné par la création de solutions élégantes à des problèmes complexes. Expérimenté en React, Node.js et technologies cloud.",
-  "aboutMe": "Bonjour ! Je suis un développeur passionné avec une expertise en React, Node.js et technologies cloud. J'aime créer des solutions élégantes à des problèmes complexes et je suis toujours désireux d'apprendre de nouvelles technologies. Avec une solide base en développement full-stack, je m'efforce de construire des applications évolutives et efficaces qui offrent d'excellentes expériences utilisateur. Quand je ne code pas, vous pouvez me trouver en train d'explorer de nouvelles tendances technologiques, de contribuer à des projets open-source ou de profiter d'activités de plein air.",
+  "intro": "Passionné par la création de solutions élégantes à des problèmes complexes. Expérimenté en Laravel, PHP et technologies cloud.",
+  "aboutMe": "Bonjour ! Je suis un développeur logiciel passionné, spécialisé dans le développement d'applications web, avec une expertise en PHP, Laravel, JavaScript, et MySQL. J'aime donner vie aux idées grâce à un code propre et efficace, que ce soit en partant de zéro ou en améliorant des solutions existantes. Je suis toujours prêt à relever des défis et j'aime collaborer avec les clients pour transformer leurs concepts en réalité. Mon objectif est de livrer des projets de haute qualité, centrés sur l'utilisateur et alignés sur vos objectifs d'affaires. Quand je ne code pas, vous me trouverez probablement en train d'explorer de nouvelles technologies ou d'affiner mes compétences pour rester à jour dans cette industrie dynamique.",
   "contactMe": "Me contacter",
   "hireMe": "Engagez-moi",
   "hireMeTitle": "Travaillons ensemble",
@@ -60,7 +60,9 @@
     "name": "Votre Nom",
     "email": "Votre Email",
     "message": "Votre Message",
-    "sendMessage": "Envoyer le message"
+    "sendMessage": "Envoyer le message",
+    "success": "Votre message a été envoyé avec succès. Nous vous répondrons sous peu !",
+    "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard."
   },
   "footer": "Tous droits réservés.",
   "toggleTheme": "Changer de thème"
