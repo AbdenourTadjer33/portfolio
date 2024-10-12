@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   applicationName: "My Portfolio",
   authors: {
     name: "Abdennour Tadjer",
-    url: "https://portfolio-rust-three-24.vercel.app",
+    url: "https://abdennour-tadjer.vercel.app",
   },
   generator: "Next.js",
   creator: "Abdennour Tadjer",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Discover the projects and skills of Abdennour Tadjer, a software developer specializing in web applications using PHP, Laravel, JavaScript, and MySQL.",
     type: "website",
-    url: "https://portfolio-rust-three-24.vercel.app",
+    url: "https://abdennour-tadjer.vercel.app",
     images: "/preview-image.png",
   },
   alternates: {
