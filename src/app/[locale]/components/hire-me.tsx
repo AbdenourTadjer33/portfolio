@@ -20,6 +20,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { ContactMeForm } from "./contact-me-form";
 
 export function HireMe({ trans }: { trans: Record<string, string> }) {
   const [isLargeScreen, setIsLargeScreen] = useState(true);
@@ -35,33 +36,23 @@ export function HireMe({ trans }: { trans: Record<string, string> }) {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  const HireContent = () => (
-    <form className="space-y-4">
-      <Input type="text" placeholder={trans?.formName} />
-      <Input type="email" placeholder={trans?.formEmail} />
-      <Textarea placeholder={trans?.formMessage} className="max-h-40" />
-      <Button type="submit" className={!isLargeScreen ? "w-full" : ""}>
-        {trans?.formSendMessage}
-      </Button>
-    </form>
-  );
-
   if (isLargeScreen) {
     return (
       <Dialog>
         <DialogTrigger asChild>
           <Button variant="outline">{trans?.hireMe}</Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="max-w-xl">
           <DialogHeader>
             <DialogTitle>{trans?.hireMeTitle}</DialogTitle>
             <DialogDescription>{trans?.hireMeDescription}</DialogDescription>
           </DialogHeader>
-          <HireContent />
+          <ContactMeForm trans={trans} type="HIRE ME" />
         </DialogContent>
       </Dialog>
     );
   }
+
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -73,7 +64,8 @@ export function HireMe({ trans }: { trans: Record<string, string> }) {
           <DrawerDescription>{trans?.hireMeDescription}</DrawerDescription>
         </DrawerHeader>
         <div className="p-4">
-          <HireContent />
+          {/* <HireContent /> */}
+          <ContactMeForm trans={trans} type="HIRE ME" />
         </div>
       </DrawerContent>
     </Drawer>
