@@ -1,4 +1,13 @@
 import { useLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata() {
+  const t = await getTranslations("projects.crti-project-management-app");
+  return {
+    title: t("name"),
+    description: t("description"),
+  };
+}
 
 export default function Project() {
   const locale = useLocale();

@@ -68,7 +68,7 @@ function ProjectCard({
   const t = useTranslations(`projects.${slug}`);
 
   return (
-    <div className="border rounded-lg overflow-hidden">
+    <div className="border rounded-lg overflow-hidden hover:shadow-lg transition duration-200">
       <Image
         src={img}
         alt={`image ${t("name")}`}
@@ -77,15 +77,17 @@ function ProjectCard({
       <div className="p-4">
         <h3 className="text-xl font-semibold mb-2">{t("name")}</h3>
         <p className="text-muted-foreground mb-4">{t("description")}</p>
-        {!extern ? (
-          <Link href={`/projects/${slug}`} passHref>
-            <Button variant="outline">{m("viewProject")}</Button>
-          </Link>
-        ) : (
-          <a href={url} target="_blank">
-            <Button variant="outline">{m("liveDemo")}</Button>
-          </a>
-        )}
+        <div className="flex justify-center">
+          {!extern ? (
+            <Link href={`/projects/${slug}`} passHref>
+              <Button variant="outline">{m("viewProject")}</Button>
+            </Link>
+          ) : (
+            <a href={url} target="_blank">
+              <Button variant="outline">{m("liveDemo")}</Button>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

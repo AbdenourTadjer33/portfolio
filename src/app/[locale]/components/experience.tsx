@@ -43,6 +43,7 @@ export default function Experience() {
               <Badge>Vite.js</Badge>
               <Badge>Alpine.js</Badge>
               <Badge>Inertia.js</Badge>
+              <Badge>MDX.js</Badge>
               <Badge>Livewire</Badge>
               <Badge>Tailwind CSS</Badge>
               <Badge>Bootstrap</Badge>

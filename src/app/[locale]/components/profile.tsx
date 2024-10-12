@@ -5,6 +5,7 @@ import { Mail } from "lucide-react";
 import { HireMe } from "./hire-me";
 
 import ProfileImg from "@/assets/profile/img.jpg";
+import Link from "next/link";
 
 export default function Profile() {
   const t = useTranslations();
@@ -15,7 +16,7 @@ export default function Profile() {
         <img
           src={ProfileImg.src}
           alt="profile picture"
-          className="w-64 h-64 rounded-full object-cover hover:scale-105 "
+          className="w-64 h-64 rounded-full object-cover"
         />
         <div>
           <h2 className="text-4xl font-bold mb-2">{t("name")}</h2>
@@ -29,18 +30,22 @@ export default function Profile() {
             <Badge>Docker</Badge>
           </div>
           <div className="flex items-center gap-2">
-            <Button>
-              <Mail className="mr-2 h-4 w-4" /> {t("contactMe")}
-            </Button>
+            <Link href="/#contact">
+              <Button>
+                <Mail className="mr-2 h-4 w-4" /> {t("contactMe")}
+              </Button>
+            </Link>
             <HireMe
               trans={{
                 hireMe: t("hireMe"),
                 hireMeTitle: t("hireMeTitle"),
                 hireMeDescription: t("hireMeDescription"),
-                formName: t("form.name"),
-                formEmail: t("form.email"),
-                formMessage: t("form.message"),
-                formSendMessage: t("form.sendMessage"),
+                name: t("form.name"),
+                email: t("form.email"),
+                message: t("form.message"),
+                sendMessage: t("form.sendMessage"),
+                success: t("form.success"),
+                error: t("form.error"),
               }}
             />
           </div>

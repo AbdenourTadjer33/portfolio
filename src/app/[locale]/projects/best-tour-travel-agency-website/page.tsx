@@ -1,4 +1,13 @@
 import { useLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata() {
+  const t = await getTranslations("projects.best-tour-travel-agency-website");
+  return {
+    title: t("name"),
+    description: t("description"),
+  };
+}
 
 export default function Project() {
   const locale = useLocale();

@@ -1,4 +1,14 @@
-import { useLocale } from "next-intl";
+import { useLocale} from "next-intl";
+import {getTranslations} from 'next-intl/server';
+
+
+export async function generateMetadata() {
+  const t = await getTranslations("projects.e-commerce-management-application");
+  return {
+    title: t("name"),
+    description: t("description"),
+  };
+}
 
 export default function Project() {
   const locale = useLocale();
@@ -11,7 +21,7 @@ export default function Project() {
     case "fr":
       MDXContent = require("./fr.mdx").default;
       break;
-    case "ar": 
+    case "ar":
       MDXContent = require("./ar.mdx").default;
       break;
   }

@@ -1,14 +1,8 @@
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Globe, Menu, Moon, Sun } from "lucide-react";
+import { Globe, Menu } from "lucide-react";
 import { LangSwitcher } from "@/components/common/LangSwitcher";
 
 export default function Navbar() {
@@ -84,7 +78,19 @@ export default function Navbar() {
                 {t("nav.contact")}
               </a>
             </nav>
-            <div className="mt-4 space-y-4">
+            <div className="mt-4 space-y-4 flex justify-end">
+              <LangSwitcher
+                trigger={
+                  <Button variant="ghost" size="sm">
+                    <Globe className="ltr:mr-2 ml-2 h-4 w-4" />
+                    {locale === "en"
+                      ? "English"
+                      : locale === "fr"
+                      ? "Français"
+                      : "العربية"}
+                  </Button>
+                }
+              />
               {/* <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
