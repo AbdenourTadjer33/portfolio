@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
 import "../globals.css";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { useLocale } from "next-intl";
 import Navbar from "@/app/[locale]/components/navbar";
 import Footer from "./components/footer";
@@ -75,10 +76,10 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <Navbar />
-
         {children}
         <Toaster richColors />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
