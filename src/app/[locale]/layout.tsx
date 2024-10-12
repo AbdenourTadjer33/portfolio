@@ -11,7 +11,11 @@ export const metadata: Metadata = {
     "Explore the portfolio of Abdennour Tadjer, a passionate software developer specializing in web applications. Featuring projects built with PHP, Laravel, JavaScript, and MySQL, this portfolio showcases clean, efficient code and user-centered solutions. Discover innovative projects and contact for collaboration opportunities.",
   keywords:
     "Abdennour Tadjer, software developer, web development, PHP, Laravel, JavaScript, MySQL, portfolio, web applications, frontend development, backend development",
-  authors: { name: "Abdennour Tadjer" },
+  applicationName: "My Portfolio",
+  authors: {
+    name: "Abdennour Tadjer",
+    url: "https://portfolio-rust-three-24.vercel.app",
+  },
   generator: "Next.js",
   creator: "Abdennour Tadjer",
   robots: "index, follow",
@@ -21,7 +25,15 @@ export const metadata: Metadata = {
       "Discover the projects and skills of Abdennour Tadjer, a software developer specializing in web applications using PHP, Laravel, JavaScript, and MySQL.",
     type: "website",
     url: "https://portfolio-rust-three-24.vercel.app",
-    images: "/preview-image.png"
+    images: "/preview-image.png",
+  },
+  alternates: {
+    canonical: "https://abdennour-tadjer.fotysolutions.com",
+    languages: {
+      en: "/en",
+      fr: "/fr",
+      ar: "/ar",
+    },
   },
 };
 
