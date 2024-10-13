@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.SITE_URL!),
   title: "Abdennour Tadjer | Software Developer Portfolio",
   description:
     "Explore the portfolio of Abdennour Tadjer, a passionate software developer specializing in web applications. Featuring projects built with PHP, Laravel, JavaScript, and MySQL, this portfolio showcases clean, efficient code and user-centered solutions. Discover innovative projects and contact for collaboration opportunities.",
