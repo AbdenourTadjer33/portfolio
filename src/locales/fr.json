@@ -71,5 +71,10 @@
     "description": "Explorez le portfolio d'Abdennour Tadjer, un développeur logiciel passionné spécialisé dans les applications web. Présentant des projets réalisés avec PHP, Laravel, JavaScript et MySQL, ce portfolio met en avant un code propre et efficace ainsi que des solutions centrées sur l'utilisateur. Découvrez des projets innovants et contactez pour des opportunités de collaboration.",
     "og-description": "Découvrez les projets et compétences d'Abdennour Tadjer, un développeur logiciel spécialisé dans les applications web utilisant PHP, Laravel, JavaScript et MySQL.",
     "preview-image": "/preview/fr.png"
+  },
+  "ariaLabel": {
+    "mail": "Envoyez-moi un e-mail",
+    "github": "Voir mon profil GitHub",
+    "linkedin": "Connectez-vous avec moi sur LinkedIn"
   }
 }

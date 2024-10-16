@@ -71,5 +71,10 @@
     "description": "Explore the portfolio of Abdennour Tadjer, a passionate software developer specializing in web applications. Featuring projects built with PHP, Laravel, JavaScript, and MySQL, this portfolio showcases clean, efficient code and user-centered solutions. Discover innovative projects and contact for collaboration opportunities.",
     "og-description": "Discover the projects and skills of Abdennour Tadjer, a software developer specializing in web applications using PHP, Laravel, JavaScript, and MySQL.",
     "preview-image": "/preview/en.png"
+  },
+  "ariaLabel": {
+    "mail": "Send me an email",
+    "github": "View my GitHub profile",
+    "linkedin": "Connect with me on LinkedIn"
   }
 }

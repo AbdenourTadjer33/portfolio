@@ -16,7 +16,7 @@ export default function Contact() {
             message: t("form.message"),
             sendMessage: t("form.sendMessage"),
             success: t("form.success"),
-            error: t("form.error")
+            error: t("form.error"),
           }}
           type="GET IN TOUCH"
         />
@@ -26,18 +26,21 @@ export default function Contact() {
             <a
               href={process.env.GITHUB_URL}
               className="text-foreground hover:text-primary"
+              aria-label={t("ariaLabel.github")}
             >
               <Github className="w-6 h-6" />
             </a>
             <a
               href={process.env.LINKEDIN_URL}
               className="text-foreground hover:text-primary"
+              aria-label={t("ariaLabel.linkedin")}
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
               href={`mailto:${process.env.EMAIL_ADDRESS}`}
               className="text-foreground hover:text-primary"
+              aria-label={t("ariaLabel.mail")}
             >
               <Mail className="w-6 h-6" />
             </a>

@@ -1,7 +1,7 @@
 import "../globals.css";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import Navbar from "@/app/[locale]/components/navbar";
 import Footer from "./components/footer";
 import { Toaster } from "@/components/ui/sonner";
