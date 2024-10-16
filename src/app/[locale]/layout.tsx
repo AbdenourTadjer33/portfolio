@@ -1,44 +1,47 @@
 import "../globals.css";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Navbar from "@/app/[locale]/components/navbar";
 import Footer from "./components/footer";
 import { Toaster } from "@/components/ui/sonner";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL!),
-  title: "Abdennour Tadjer | Software Developer Portfolio",
-  description:
-    "Explore the portfolio of Abdennour Tadjer, a passionate software developer specializing in web applications. Featuring projects built with PHP, Laravel, JavaScript, and MySQL, this portfolio showcases clean, efficient code and user-centered solutions. Discover innovative projects and contact for collaboration opportunities.",
-  keywords:
-    "Abdennour Tadjer, software developer, web development, PHP, Laravel, JavaScript, MySQL, portfolio, web applications, frontend development, backend development",
-  applicationName: "My Portfolio",
-  authors: {
-    name: "Abdennour Tadjer",
-    url: "https://abdennour-tadjer.vercel.app",
-  },
-  generator: "Next.js",
-  creator: "Abdennour Tadjer",
-  robots: "index, follow",
-  openGraph: {
-    siteName: "Abdennour Tadjer Portfolio's",
-    title: "Abdennour Tadjer - Software Developer Portfolio",
-    description:
-      "Discover the projects and skills of Abdennour Tadjer, a software developer specializing in web applications using PHP, Laravel, JavaScript, and MySQL.",
-    type: "website",
-    url: "https://abdennour-tadjer.vercel.app",
-    images: "/preview-image.png",
-  },
-  alternates: {
-    canonical: "https://abdennour-tadjer.fotysolutions.com",
-    languages: {
-      en: "/en",
-      fr: "/fr",
-      ar: "/ar",
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata");
+
+  return {
+    metadataBase: new URL(process.env.SITE_URL!),
+    title: t("title"),
+    description: t("description"),
+    keywords:
+      "Abdennour Tadjer, software developer, web development, PHP, Laravel, JavaScript, MySQL, portfolio, web applications, frontend development, backend development",
+    applicationName: "My Portfolio",
+    authors: {
+      name: "Abdennour Tadjer",
+      url: "https://abdennour-tadjer.vercel.app",
     },
-  },
-};
+    generator: "Next.js",
+    creator: "Abdennour Tadjer",
+    robots: "index, follow",
+    openGraph: {
+      siteName: "Abdennour Tadjer Portfolio's",
+      title: t("title"),
+      description: t("og-description"),
+      type: "website",
+      url: "https://abdennour-tadjer.vercel.app",
+      images: t("preview-image"),
+    },
+    alternates: {
+      canonical: "https://abdennour-tadjer.fotysolutions.com",
+      languages: {
+        en: "/en",
+        fr: "/fr",
+        ar: "/ar",
+      },
+    },
+  };
+}
 
 export default function RootLayout({
   children,
@@ -56,10 +59,10 @@ export default function RootLayout({
           name="google-site-verification"
           content="yOZjx0tfJnSMoBstTi-z9hjnbeuy3EwSmWCT--g5Axg"
         />
-        {/* <link
+        <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet"
-        /> */}
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
