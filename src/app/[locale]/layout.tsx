@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   creator: "Abdennour Tadjer",
   robots: "index, follow",
   openGraph: {
+    siteName: "Abdennour Tadjer Portfolio's",
     title: "Abdennour Tadjer - Software Developer Portfolio",
     description:
       "Discover the projects and skills of Abdennour Tadjer, a software developer specializing in web applications using PHP, Laravel, JavaScript, and MySQL.",
@@ -51,7 +52,10 @@ export default function RootLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
-        <meta name="google-site-verification" content="yOZjx0tfJnSMoBstTi-z9hjnbeuy3EwSmWCT--g5Axg" />
+        <meta
+          name="google-site-verification"
+          content="yOZjx0tfJnSMoBstTi-z9hjnbeuy3EwSmWCT--g5Axg"
+        />
         {/* <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet"
