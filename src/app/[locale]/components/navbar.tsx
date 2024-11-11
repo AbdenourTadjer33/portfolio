@@ -42,16 +42,6 @@ export default function Navbar() {
             </li>
           </ul>
           <LangSwitcher />
-          {/* <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          title={t.toggleTheme}
-        >
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">{t.toggleTheme}</span>
-        </Button> */}
         </nav>
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
@@ -91,43 +81,6 @@ export default function Navbar() {
                   </Button>
                 }
               />
-              {/* <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="w-full justify-start"
-                  >
-                    <Globe className="mr-2  h-4 w-4" />
-                    {locale === "en"
-                      ? "English"
-                      : locale === "fr"
-                      ? "Français"
-                      : "العربية"}
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuItem onClick={switchLang("en")}>
-                    English
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={switchLang("fr")}>
-                    Français
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={switchLang("ar")}>
-                    العربية
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu> */}
-              {/* <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="w-full justify-start"
-            >
-              <Sun className="mr-2 h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="mr-2 h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              {t.toggleTheme}
-            </Button> */}
             </div>
           </SheetContent>
         </Sheet>
