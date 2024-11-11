@@ -64,7 +64,6 @@ export function HireMe({ trans }: { trans: Record<string, string> }) {
           <DrawerDescription>{trans?.hireMeDescription}</DrawerDescription>
         </DrawerHeader>
         <div className="p-4">
-          {/* <HireContent /> */}
           <ContactMeForm trans={trans} type="HIRE ME" />
         </div>
       </DrawerContent>
