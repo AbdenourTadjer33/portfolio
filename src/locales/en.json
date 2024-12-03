@@ -16,8 +16,6 @@
   "hireMeDescription": "I'm currently available for freelance work. If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then get in touch.",
   "projectsTitle": "My Projects",
   "projectDesc": "A brief description of project {number} and the technologies used.",
-  "viewProject": "View Project",
-  "liveDemo": "Live Demo",
   "backToPortfolio": "Back to Portfolio",
   "projects": {
     "crti-project-management-app": {
@@ -28,8 +26,24 @@
       "name": "E'CommerceControl - Admin Panel for E-commerce Management Apps",
       "description": ""
     },
+    "event-plus-app": {
+      "name": "Event+ - Event Booking App",
+      "description": ""
+    },
+    "saas-starter-kit-template": {
+      "name": "Multi Tenancy Saas Template",
+      "description": ""
+    },
+    "hotel-sidi-el-noui-app": {
+      "name": "Hotel Sidi El Noui - Online Reservation Application",
+      "description": ""
+    },
+    "entv-vehicle-management-system": {
+      "name": "ETNV - Vehicle Management System",
+      "description": ""
+    },
     "best-tour-travel-agency-website": {
-      "name": "TravelMate - Complete Travel Agency Management System",
+      "name": "TravelMate - Travel Agency Management System",
       "description": ""
     },
     "sagimex-pro-business-website": {
@@ -76,5 +90,9 @@
     "mail": "Send me an email",
     "github": "View my GitHub profile",
     "linkedin": "Connect with me on LinkedIn"
-  }
+  },
+  "viewProject": "View Project",
+  "liveDemo": "Live Demo",
+  "checkGithub": "Github",
+  "isnt-ready": "Page Not Ready Yet"
 }

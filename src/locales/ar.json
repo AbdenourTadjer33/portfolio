@@ -16,8 +16,6 @@
   "hireMeDescription": "أنا متاح حاليًا للعمل الحر. إذا كان لديك مشروع ترغب في بدئه، أو تعتقد أنك بحاجة إلى مساعدتي في شيء ما، أو ترغب فقط في إلقاء التحية، فلا تتردد في التواصل معي.",
   "projectsTitle": "مشاريعي",
   "projectDesc": "وصف موجز للمشروع {number} والتقنيات المستخدمة.",
-  "viewProject": "عرض المشروع",
-  "liveDemo": "العرض المباشر",
   "backToPortfolio": "العودة إلى المحفظة",
   "projects": {
     "crti-project-management-app": {
@@ -25,15 +23,31 @@
       "description": ""
     },
     "e-commerce-management-application": {
-      "name": "E'CommerceControl - لوحة تحكم الإدارة لتطبيقات إدارة التجارة الإلكترونية",
+      "name": "E'CommerceControl - لوحة تحكم لإدارة تطبيقات التجارة الإلكترونية",
+      "description": ""
+    },
+    "event-plus-app": {
+      "name": "Event+ - تطبيق حجز الأحداث",
+      "description": ""
+    },
+    "saas-starter-kit-template": {
+      "name": "قالب Saas متعدد الإيجار",
+      "description": ""
+    },
+    "hotel-sidi-el-noui-app": {
+      "name": "فندق سيدي النوي - تطبيق الحجز عبر الإنترنت",
+      "description": ""
+    },
+    "entv-vehicle-management-system": {
+      "name": "ETNV - نظام إدارة المركبات",
       "description": ""
     },
     "best-tour-travel-agency-website": {
-      "name": "TravelMate - نظام إدارة شامل لوكالات السفر",
+      "name": "TravelMate - نظام إدارة وكالات السفر",
       "description": ""
     },
     "sagimex-pro-business-website": {
-      "name": "Sagimex Pro - موقع الأعمال",
+      "name": "Sagimex Pro - موقع ويب للأعمال",
       "description": ""
     }
   },
@@ -76,5 +90,9 @@
     "mail": "أرسل لي بريدًا إلكترونيًا",
     "github": "عرض ملفي الشخصي على GitHub",
     "linkedin": "تواصل معي على LinkedIn"
-  }
+  },
+  "viewProject": "عرض المشروع",
+  "liveDemo": "العرض المباشر",
+  "checkGithub": "Github",
+  "isnt-ready": "الصفحة ليست جاهزة بعد"
 }

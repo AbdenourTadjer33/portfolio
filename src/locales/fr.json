@@ -16,8 +16,6 @@
   "hireMeDescription": "Je suis actuellement disponible pour du travail freelance. Si vous avez un projet que vous souhaitez démarrer, pensez que vous avez besoin de mon aide pour quelque chose ou souhaitez simplement dire bonjour, alors contactez-moi.",
   "projectsTitle": "Mes Projets",
   "projectDesc": "Une brève description du projet {number} et des technologies utilisées.",
-  "viewProject": "Voir le projet",
-  "liveDemo": "Démo en direct",
   "backToPortfolio": "Retour au Portfolio",
   "projects": {
     "crti-project-management-app": {
@@ -28,8 +26,24 @@
       "name": "E'CommerceControl - Panneau d'administration pour les applications de gestion d'e-commerce",
       "description": ""
     },
+    "event-plus-app": {
+      "name": "Event+ - Application de Réservation d'Êvénements",
+      "description": ""
+    },
+    "saas-starter-kit-template": {
+      "name": "Multi Tenancy Saas Template",
+      "description": ""
+    },
+    "hotel-sidi-el-noui-app": {
+      "name": "Hotel Sidi El Noui - Application de Réservation Online",
+      "description": ""
+    },
+    "entv-vehicle-management-system": {
+      "name": "ETNV - Système de Gestion de Véhicule",
+      "description": ""
+    },
     "best-tour-travel-agency-website": {
-      "name": "TravelMate - Système de gestion complet pour agences de voyage",
+      "name": "TravelMate - Système de gestion pour agences de voyage",
       "description": ""
     },
     "sagimex-pro-business-website": {
@@ -76,5 +90,9 @@
     "mail": "Envoyez-moi un e-mail",
     "github": "Voir mon profil GitHub",
     "linkedin": "Connectez-vous avec moi sur LinkedIn"
-  }
+  },
+  "viewProject": "Voir le projet",
+  "liveDemo": "Démo en direct",
+  "checkGithub": "Github",
+  "isnt-ready": "La page n'est pas encore prête"
 }
