@@ -4,8 +4,9 @@ import { Analytics } from "@vercel/analytics/react";
 import { useLocale } from "next-intl";
 import Navbar from "@/app/[locale]/components/navbar";
 import Footer from "./components/footer";
-import { Toaster } from "@/components/ui/sonner";
 import { getTranslations } from "next-intl/server";
+import Providers from "../providers";
+import { Toaster } from "sonner";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("metadata");
@@ -83,11 +84,13 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="antialiased">
-        <Navbar />
-        {children}
-        <Toaster richColors />
-        <Footer />
-        <Analytics />
+        <Providers>
+          <Navbar />
+          {children}
+          <Toaster richColors />
+          <Footer />
+          <Analytics />
+        </Providers>
       </body>
     </html>
   );
