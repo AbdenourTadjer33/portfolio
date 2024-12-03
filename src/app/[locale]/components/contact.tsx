@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ContactMeForm } from "./contact-me-form";
+import constants from "@/data/constant";
 
 export default function Contact() {
   const t = useTranslations();
@@ -24,21 +25,21 @@ export default function Contact() {
           <p className="text-lg">{t("contactText")}</p>
           <div className="flex gap-4">
             <a
-              href={process.env.GITHUB_URL}
+              href={constants.githubUrl}
               className="text-foreground hover:text-primary"
               aria-label={t("ariaLabel.github")}
             >
               <Github className="w-6 h-6" />
             </a>
             <a
-              href={process.env.LINKEDIN_URL}
+              href={constants.linkedinUrl}
               className="text-foreground hover:text-primary"
               aria-label={t("ariaLabel.linkedin")}
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href={`mailto:${process.env.EMAIL_ADDRESS}`}
+              href={`mailto:${constants.emailAddress}`}
               className="text-foreground hover:text-primary"
               aria-label={t("ariaLabel.mail")}
             >
