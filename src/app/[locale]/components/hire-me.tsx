@@ -43,7 +43,7 @@ export function HireMe({ trans }: { trans: Record<string, string> }) {
     );
   }
 
-  return <HireMeDrawer  />
+  return <HireMeDrawer trans={trans} />
 }
 
 function HireMeDrawer({ trans }: { trans: Record<string, string> }) {
