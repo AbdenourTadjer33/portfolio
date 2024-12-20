@@ -21,6 +21,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { ContactMeForm } from "./contact-me-form";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export function HireMe({ trans }: { trans: Record<string, string> }) {
   const isDesktop = useMediaQuery("(min-width: 700px)");
