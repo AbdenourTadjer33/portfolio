@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -23,20 +23,9 @@ import {
 import { ContactMeForm } from "./contact-me-form";
 
 export function HireMe({ trans }: { trans: Record<string, string> }) {
-  const [isLargeScreen, setIsLargeScreen] = useState(true);
+  const isDesktop = useMediaQuery("(min-width: 700px)");
 
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth >= 528); // Adjust this value as needed
-    };
-
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
-
-  if (isLargeScreen) {
+  if (isDesktop) {
     return (
       <Dialog>
         <DialogTrigger asChild>
@@ -53,8 +42,37 @@ export function HireMe({ trans }: { trans: Record<string, string> }) {
     );
   }
 
+  return <HireMeDrawer  />
+}
+
+function HireMeDrawer({ trans }: { trans: Record<string, string> }) {
+  const drawerRef = React.useRef(null);
+
+  React.useEffect(() => {
+    function onVisualViewportChange() {
+      const visualViewportHeight = window.visualViewport.height;
+      const keyboardHeight = window.innerHeight - visualViewportHeight;
+ 
+      // Difference between window height and height excluding the keyboard
+      const diffFromInitial = window.innerHeight - visualViewportHeight;
+ 
+      const drawerHeight = drawerRef.current.getBoundingClientRect().height || 0;
+ 
+      drawerRef.current.style.height = `${visualViewportHeight - OFFSET}px`;
+      drawerRef.current.style.bottom = `${Math.max(diffFromInitial, 0)}px`;
+    }
+ 
+    window.visualViewport?.addEventListener("resize", onVisualViewportChange);
+ 
+    return () =>
+      window.visualViewport?.removeEventListener(
+        "resize",
+        onVisualViewportChange,
+      );
+  }, []);
+
   return (
-    <Drawer>
+    <Drawer ref={drawerRef}>
       <DrawerTrigger asChild>
         <Button variant="outline">{trans?.hireMe}</Button>
       </DrawerTrigger>
