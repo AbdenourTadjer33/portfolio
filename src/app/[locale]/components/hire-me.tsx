@@ -51,7 +51,7 @@ function HireMeDrawer({ trans }: { trans: Record<string, string> }) {
 
   React.useEffect(() => {
     function onVisualViewportChange() {
-      const visualViewportHeight = window.visualViewport.height;
+      const visualViewportHeight = window.visualViewport?.height;
       const keyboardHeight = window.innerHeight - visualViewportHeight;
  
       // Difference between window height and height excluding the keyboard
