@@ -47,7 +47,22 @@ export function HireMe({ trans }: HireMeProps) {
     );
   }
 
-  return <HireMeDrawer trans={trans} />;
+  return (
+    <Drawer repositionInputs={false}>
+      <DrawerTrigger asChild>
+        <Button variant="outline">{trans?.hireMe}</Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerHeader>
+          <DrawerTitle>{trans?.hireMeTitle}</DrawerTitle>
+          <DrawerDescription>{trans?.hireMeDescription}</DrawerDescription>
+        </DrawerHeader>
+        <div className="p-4">
+          <ContactMeForm trans={trans} type="HIRE ME" />
+        </div>
+      </DrawerContent>
+    </Drawer>
+  );
 }
 
 function HireMeDrawer({ trans }: HireMeProps) {
