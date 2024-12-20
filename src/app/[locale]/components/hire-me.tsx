@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -23,7 +23,11 @@ import {
 import { ContactMeForm } from "./contact-me-form";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
-export function HireMe({ trans }: { trans: Record<string, string> }) {
+interface HireMeProps {
+  trans: Record<string, string>;
+}
+
+export function HireMe({ trans }: HireMeProps) {
   const isDesktop = useMediaQuery("(min-width: 700px)");
 
   if (isDesktop) {
@@ -43,41 +47,40 @@ export function HireMe({ trans }: { trans: Record<string, string> }) {
     );
   }
 
-  return <HireMeDrawer trans={trans} />
+  return <HireMeDrawer trans={trans} />;
 }
 
-function HireMeDrawer({ trans }: { trans: Record<string, string> }) {
-  const drawerRef = React.useRef(null);
+function HireMeDrawer({ trans }: HireMeProps) {
+  const drawerRef = useRef<HTMLDivElement | null>(null);
 
-  React.useEffect(() => {
-    function onVisualViewportChange() {
-      const visualViewportHeight = window.visualViewport?.height;
-      const keyboardHeight = window.innerHeight - visualViewportHeight;
- 
-      // Difference between window height and height excluding the keyboard
-      const diffFromInitial = window.innerHeight - visualViewportHeight;
- 
-      const drawerHeight = drawerRef.current.getBoundingClientRect().height || 0;
- 
-      drawerRef.current.style.height = `${visualViewportHeight - OFFSET}px`;
-      drawerRef.current.style.bottom = `${Math.max(diffFromInitial, 0)}px`;
-    }
- 
+  useEffect(() => {
+    const onVisualViewportChange = () => {
+      const visualViewportHeight = window.visualViewport?.height || 0;
+      const OFFSET = 16; // Adjust this as needed for padding/margin considerations
+
+      if (drawerRef.current) {
+        const diffFromInitial = window.innerHeight - visualViewportHeight;
+        drawerRef.current.style.height = `${visualViewportHeight - OFFSET}px`;
+        drawerRef.current.style.bottom = `${Math.max(diffFromInitial, 0)}px`;
+      }
+    };
+
     window.visualViewport?.addEventListener("resize", onVisualViewportChange);
- 
-    return () =>
+
+    return () => {
       window.visualViewport?.removeEventListener(
         "resize",
-        onVisualViewportChange,
+        onVisualViewportChange
       );
+    };
   }, []);
 
   return (
-    <Drawer ref={drawerRef}>
+    <Drawer>
       <DrawerTrigger asChild>
         <Button variant="outline">{trans?.hireMe}</Button>
       </DrawerTrigger>
-      <DrawerContent>
+      <DrawerContent ref={drawerRef}>
         <DrawerHeader>
           <DrawerTitle>{trans?.hireMeTitle}</DrawerTitle>
           <DrawerDescription>{trans?.hireMeDescription}</DrawerDescription>
