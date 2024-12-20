@@ -2,7 +2,7 @@ import React from "react";
 
 export function useMediaQuery(query: string): boolean {
     const subscribe = React.useCallback(
-        (callback) => {
+        (callback: (event: MediaQueryListEvent) => void) => {
             const matchMedia = window.matchMedia(query);
 
             matchMedia.addEventListener("change", callback);
@@ -18,7 +18,7 @@ export function useMediaQuery(query: string): boolean {
     };
 
     const getServerSnapshot = () => {
-        throw Error("useMediaQuery is a client-only hook");
+        throw new Error("useMediaQuery is a client-only hook");
     };
 
     return React.useSyncExternalStore(
