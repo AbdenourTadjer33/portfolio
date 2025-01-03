@@ -60,7 +60,11 @@ export default function RootLayout({
           content="yOZjx0tfJnSMoBstTi-z9hjnbeuy3EwSmWCT--g5Axg"
         />
         {process.env.NODE_ENV === 'production' && (
-          <script defer src={process.env.TRACKING_SOURCE} data-website-id={process.env.TRACKING_WEBSITE_ID}></script>
+          <Script
+              src={process.env.TRACKING_SOURCE}
+              data-website-id={process.env.TRACKING_WEBSITE_ID}
+              strategy="afterInteractive"
+          />
         )}
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
