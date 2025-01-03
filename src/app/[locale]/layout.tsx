@@ -82,7 +82,9 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <script defer src="https://cloud.umami.is/script.js" data-website-id="7b6bee92-56d3-4adc-8b36-dfb1c7517c39"></script>
+        {process.env.NODE_ENV === 'production' && (
+          <script defer src={process.env.TRACKING_SOURCE} data-website-id={process.env.TRACKING_WEBSITE_ID}></script>
+        )}
       </head>
       <body className="antialiased">
         <Providers>
