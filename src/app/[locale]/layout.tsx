@@ -1,6 +1,5 @@
 import "../globals.css";
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
 import { useLocale } from "next-intl";
 import Navbar from "@/app/[locale]/components/navbar";
 import Footer from "./components/footer";
@@ -60,6 +59,9 @@ export default function RootLayout({
           name="google-site-verification"
           content="yOZjx0tfJnSMoBstTi-z9hjnbeuy3EwSmWCT--g5Axg"
         />
+        {process.env.NODE_ENV === 'production' && (
+          <script defer src={process.env.TRACKING_SOURCE} data-website-id={process.env.TRACKING_WEBSITE_ID}></script>
+        )}
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet"
@@ -82,9 +84,6 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        {process.env.NODE_ENV === 'production' && (
-          <script defer src={process.env.TRACKING_SOURCE} data-website-id={process.env.TRACKING_WEBSITE_ID}></script>
-        )}
       </head>
       <body className="antialiased">
         <Providers>
@@ -92,7 +91,6 @@ export default function RootLayout({
           {children}
           <Toaster richColors />
           <Footer />
-          <Analytics />
         </Providers>
       </body>
     </html>
