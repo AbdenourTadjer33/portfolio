@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import { getTranslations } from "next-intl/server";
 import Providers from "../providers";
 import { Toaster } from "sonner";
+import Script from 'next/script';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("metadata");
