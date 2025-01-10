@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("title"),
     description: t("description"),
     keywords:
-      "Abdennour Tadjer, software developer, web development, PHP, Laravel, JavaScript, MySQL, portfolio, web applications, frontend development, backend development",
+      "Abdennour Tadjer, Abdenour, Tadjer, abdennour, abdenour tadjer, tadjer, dz developer, Abdenour Tadjer, abdennour.tadjer, abdenour.tadjer, software developer, web development, PHP, Laravel, JavaScript, MySQL, portfolio, web applications, frontend development, backend development",
     applicationName: "My Portfolio",
     authors: {
       name: "Abdennour Tadjer",
